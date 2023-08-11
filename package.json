@@ -20,9 +20,10 @@
     "react-addons-css-transition-group": "^15.4.0",
     "react-copy-to-clipboard": "^4.2.3",
     "react-dom": "^15.4.0",
-    "react-notification-system": "ibc/react-notification-system#master",
+    "react-notification-system": "^0.4.0",
     "react-tap-event-plugin": "^2.0.1",
-    "url-parse": "^1.1.7"
+    "url-parse": "^1.1.7",
+    "vinyl": "^3.0.0"
   },
   "devDependencies": {
     "babel-plugin-transform-object-assign": "^6.8.0",
@@ -37,7 +38,7 @@
     "eslint": "^3.10.2",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-react": "6.2.1",
-    "gulp": "git://github.com/gulpjs/gulp.git#4.0",
+    "gulp": "^4.0.2",
     "gulp-css-base64": "^1.3.4",
     "gulp-eslint": "^3.0.1",
     "gulp-header": "^1.8.8",
@@ -52,7 +53,7 @@
     "ncp": "^2.0.0",
     "nib": "^1.1.2",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
+    "vinyl-source-stream": "^2.0.0",
     "watchify": "^3.7.0"
   }
 }

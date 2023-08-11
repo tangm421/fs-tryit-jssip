@@ -136,7 +136,20 @@ export default class Settings extends React.Component
 								/>
 							}
 						/>
+					</List>
 
+					<div className='item'>
+						<TextField
+							floatingLabelText='Session Timers interval'
+							value={settings.session_timers_expires || 120}
+							disabled={!settings.session_timers}
+							floatingLabelFixed
+							fullWidth
+							onChange={this.handleChangeSessionTimersExpires.bind(this)}
+						/>
+					</div>
+
+					<List>
 						<ListItem
 							primaryText='Preloaded Route'
 							secondaryText='Add a Route header with the server URI'
@@ -283,6 +296,14 @@ export default class Settings extends React.Component
 		let settings = this.state.settings;
 
 		settings.session_timers = !settings.session_timers;
+		this.setState({ settings });
+	}
+
+	handleChangeSessionTimersExpires(event)
+	{
+		let settings = this.state.settings;
+
+		settings.session_timers_expires = event.target.value;
 		this.setState({ settings });
 	}
 

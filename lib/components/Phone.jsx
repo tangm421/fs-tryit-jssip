@@ -348,7 +348,7 @@ export default class Phone extends React.Component
 
 	handleOutgoingCall(uri)
 	{
-		logger.debug('handleOutgoingCall() [uri:"%s"]', uri);
+		logger.debug('handleOutgoingCall() [uri:"%s", session_timers_expires:%d]', uri, this.props.settings.session_timers_expires);
 
 		let session = this._ua.call(uri,
 			{
@@ -362,7 +362,8 @@ export default class Phone extends React.Component
 				{
 					offerToReceiveAudio : 1,
 					offerToReceiveVideo : 1
-				}
+				},
+				sessionTimersExpires : this.props.settings.session_timers_expires || 120
 			});
 
 		session.on('connecting', () =>
